@@ -14,3 +14,24 @@ code {
 .errorDiv{
   width:100%;
 }
+.navbar .nav-pills >li >Link{
+  color: black;
+}
+ .navbar .nav-pills > li > Link:hover {
+   background-color: gold;
+   color: black;
+}
+
+.navbar .nav-pills .active {
+ background-color: gold;
+ color:Black ;
+ font-weight:bold;
+}
+.actives{
+  background-color: rgb(92, 30, 128);
+   color: white;
+}
+.actives .active{
+  background-color: rgb(92, 30, 128);
+  color: white;
+ }

@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import '../assets/css/material-dashboard-rtl.css'
+import '../assets/css/material-dashboard.css'
+import '../assets/css/material-dashboard.min.css'
+
 
 class Categorytable extends Component{
 render(){
     return (
         <>
-    <div style={{margin:"3%"}}>
+    <div style={{margin:"6%"}}>
     <div class="content">
     <div class="container-fluid">
     <div class="row"></div>
@@ -16,6 +20,7 @@ render(){
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
+                  <font size="3" font-family= 'Open Sans'>
                     <table class="table table-hover">
                       <thead class="">
                         <th>
@@ -139,6 +144,7 @@ render(){
                         </tr>
                       </tbody>
                     </table>
+                    </font>
                   </div>
                 </div>
               </div>

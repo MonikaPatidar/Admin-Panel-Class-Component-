@@ -1,62 +1,72 @@
 import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
-    Link
+
+    NavLink
   } from "react-router-dom";
 
 class MainFrame extends Component{
     constructor(props){
         super(props);
-        this.state={
-
+        this.state = {
+          showMenu: false,
         }
     }
 
     render(){
+      debugger
         return(
             <>
             {/* sideBar Start */}
+            <div class="wrapper ">
             <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
                 Creative Tim
                 </a></div>
             <div class="sidebar-wrapper">
-                <ul class="nav">
-                <li class="nav-item active">
-                    <Link class="nav-link" to="/materialdeshbord">
+                <ul class="nav nav-pills">
+                <li class="nav-item ">
+                    <NavLink className="nav-link" to="/materialdeshbord" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}}>
                     DeshBoard
                     <i class="material-icons">dashboard</i>
-                    </Link>
+                    </NavLink>
                 </li>
-                <li class="nav-item ">
-                    <Link class="nav-link" to="/user/profile">
+                
+                <li class="nav-item">
+                     <NavLink className="nav-link" to="/user/profile" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}} >
                     User Profile
                     <i class="material-icons">person</i>
-                    </Link>
+                    </NavLink>
                 </li>
                 <li class="nav-item ">
-                    <Link class="nav-link" to="/categories">
-                    Categories
+                     <NavLink className="nav-link" to="/categories" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}} >
+                     Categories
                     <i class="material-icons">table</i>
-                    </Link>
+                    </NavLink>
                 </li>
                 <li class="nav-item ">
-                    <Link class="nav-link" to="/table">
-                    Products
+                     <NavLink className="nav-link" to="/map" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}} >
+                     Map
+                    <i class="material-icons">map</i>
+                    </NavLink>
+                </li>
+                <li class="nav-item ">
+                     <NavLink className="nav-link" to="/table" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}} >
+                     Cart
                     <i class="material-icons">person</i>
-                    </Link>
+                    </NavLink>
                 </li>
                 <li class="nav-item ">
-                    <Link class="nav-link" to="/table">
-                    Cart
-                    <i class="material-icons">person</i>
-                    </Link>
+                     <NavLink className="nav-link" className="nav-link" to="/notification" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}} >
+                      Notification
+                      <i class="material-icons">notifications</i>
+                    </NavLink>
                 </li>
                 <li class="nav-item ">
-                    <Link class="nav-link" to="/table">
+                    <NavLink className="nav-link" to="/login" activeStyle={{color: "white",backgroundColor: "rgb(92, 30, 128)"}} >
                     SignOut
                     <i class="material-icons">person</i>
-                    </Link>
+                    </NavLink> 
                 </li>
                 </ul>
             </div>
@@ -113,10 +123,12 @@ class MainFrame extends Component{
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {/* <button class="nav-link" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> */}
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
+                  {/* </button> */}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="#">Profile</a>
@@ -131,6 +143,7 @@ class MainFrame extends Component{
       </nav>
       {this.props.children}
       {/* End Navbar */}
+    </div>
     </div>
             </>
         )

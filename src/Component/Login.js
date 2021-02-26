@@ -94,7 +94,7 @@ export class UserLogin extends Component{
   render(){
 
     if(this.props.flag===true){
-      this.props.history.push("/user/deshboard")
+      this.props.history.push("/materialdeshbord")
     }
 
     return (
